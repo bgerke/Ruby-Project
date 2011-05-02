@@ -1,0 +1,79 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	padding: 0;
+}
+body {
+	background-image:url(images/img01.gif);
+	background-repeat:repeat-x;
+}
+
+#wrapper{
+	width:900px;
+	margin:0 auto;
+	padding-top: 68px;
+}
+
+#content{
+	padding: 0;
+	margin-top: 0px;
+	width:900px;
+	height:800px;
+	background-color:#FFF;
+}
+
+h1 {
+	text-transform: uppercase;
+	color:#000;
+}
+
+h2 {
+	padding-top: 50px;
+	padding-left: 20px;
+}
+
+p {
+	padding-right: 20px;
+	padding-left: 20px;
+}
+#causes {
+	padding-left: 40px;
+}
+#menu{
+	width:900px;
+	height:55px;
+	background-image:url(images/img02.gif);
+	background-repeat:repeat-x;
+	margin-top:-22px;
+	display:inline-block;
+}
+
+#menu li {
+display:inline-block;
+list-style: none;
+}
+#menu a {
+	margin-top:-30px;
+	display: block;
+	height: 41px;
+	margin-right: 1px;
+	padding: 20px 20px 0px 20px;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-shadow: #7E0044 -1px 1px 2px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	color: #FFFFFF;
+	border: none;
+
+} 
+#menu a:hover {
+	background: url(images/img03.gif) repeat-x left top;
+	text-decoration: none;
+}
+#menu .current_page_item a {
+	background: url(images/img03.gif) repeat-x left top;
+	text-shadow: #43206B -1px 1px 2px;
+}
