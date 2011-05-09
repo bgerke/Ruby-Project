@@ -1,4 +1,4 @@
-<table border="1">
+<!--><table border="1">
 	<tr>
 		<th>Title</th>
 		<th>Actor</th>
@@ -11,4 +11,19 @@
 		<td>Don Siegel</td>
 		<td>Action</td>
 	</tr>
-</table>
+</table><!-->
+	
+	<% @movie.each do |note| %>
+	  <article <%= 'class="complete"' if movie.complete %>>
+	    <p>
+	      	<%= movie.title %>
+			<%= movie.actor %>
+			<%= movie.director %>
+			<%= movie.genre %>
+	      <span><a href="/<%= movie.id %>">[edit]</a></span>
+	    </p>
+	    <p class="links">
+	      <a href="/<%= movie.id %>/complete">&#8623;</a>
+	    </p>
+	  </article>
+	<% end %>
