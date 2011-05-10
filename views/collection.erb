@@ -13,17 +13,17 @@
 	</tr>
 </table><!-->
 	
-	<% @movie.each do |note| %>
-	  <article <%= 'class="complete"' if movie.complete %>>
+	<% movies.each do |movie| %>
+	  <article <%= 'class="complete"' if movies.complete %>>
 	    <p>
 	      	<%= movie.title %>
 			<%= movie.actor %>
 			<%= movie.director %>
 			<%= movie.genre %>
-	      <span><a href="/<%= movie.id %>">[edit]</a></span>
+	      <span><a href="/<%= movies.id %>">[edit]</a></span>
 	    </p>
 	    <p class="links">
-	      <a href="/<%= movie.id %>/complete">&#8623;</a>
+	      <a href="/<%= movies.id %>/complete">&#8623;</a>
 	    </p>
 	  </article>
 	<% end %>

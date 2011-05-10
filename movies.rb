@@ -7,9 +7,9 @@ get ('/add') do
 end
 
 get ('/collection') do
-  @movies = Movies.all :order => :id.desc
+  movies = Movies.all :order => :id.desc
   @title = 'All Movies'
-  erb :collection
+  erb :collection, :locals => { :movies => movies }
 end
 
 get ('/') do
@@ -31,7 +31,7 @@ end
 DataMapper.finalize.auto_upgrade! #Tells Datamapper to automaticly update the database with changes made
 
 post '/collection' do
-  m = Movie.new
+  m = Movies.new
   m.title = params[:title]
   m.genre = params[:genre]
   m.director = params[:director]
