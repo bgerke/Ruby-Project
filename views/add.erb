@@ -1,16 +1,25 @@
+<div id="menu">
+	<ul>
+		<li><a href="/">Home</a></li>
+		<li><a href="collection">Collection</a></li>
+		<li class="current_page_item"><a href="add">Add Movie</a></li>
+	</ul>
+</div>
+
 <section id="add">
 <form action='/collection' method="POST">
-	<label for="title">Movie Title:</label>
+	<label for="title">Movie Title: </label>
 	<input type="text" id="title" name="title">
 	</br>
 	<label for="genre">Movie Genre:</label>
 	<input type="text" id="genre" name="genre">
 	</br>
-	<label for="director">Director:</label>
+	<label for="director">Director:   </label>
 	<input type="text" id="director" name="director">
 	</br>
 	<label for="lead">Lead Role:</label>
 	<input type="text" id="lead" name="lead">
+	</br>
 	</br>
 	<input type="submit" value="Add to my collection.">
 </form>

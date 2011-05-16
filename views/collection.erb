@@ -13,6 +13,14 @@
 	</tr>
 </table><!-->
 	
+	<div id="menu">
+		<ul>
+			<li><a href="/">Home</a></li>
+			<li class="current_page_item"><a href="collection">Collection</a></li>
+			<li><a href="add">Add Movie</a></li>
+		</ul>
+	</div>
+	
 	<% movies.each do |movie| %>
 	  <article <%= 'class="complete"' if movies.complete %>>
 	    <p>

@@ -4,6 +4,7 @@
 * {
 	padding: 0;
 }
+
 body {
 	background-image:url(images/img01.gif);
 	background-repeat:repeat-x;
@@ -76,4 +77,13 @@ list-style: none;
 #menu .current_page_item a {
 	background: url(images/img03.gif) repeat-x left top;
 	text-shadow: #43206B -1px 1px 2px;
+}
+
+#add {
+	margin-top: 40px;
+	margin-left: 40px;
+}
+
+#add label{
+	display: block;
 }
