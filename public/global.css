@@ -38,9 +38,6 @@ p {
 	padding-right: 20px;
 	padding-left: 20px;
 }
-#causes {
-	padding-left: 40px;
-}
 #menu{
 	width:900px;
 	height:55px;
@@ -86,4 +83,9 @@ list-style: none;
 
 #add label{
 	display: block;
+}
+
+#table{
+	margin-top: 40px;
+	margin-left: 40px;
 }

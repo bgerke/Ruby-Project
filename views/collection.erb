@@ -5,14 +5,22 @@
 			<li><a href="add">Add Movie</a></li>
 		</ul>
 	</div>
-	
+	<table border="3" CELLSPACING="5" CELLPADDING="5" id="table">
+		<tr>
+		<th BGCOLOR="#99CCFF">Title</th>
+		<th BGCOLOR="#99CCFF">Director</th>
+		<th BGCOLOR="#99CCFF">Lead Role</th>
+		<th BGCOLOR="#99CCFF">Genre</th>
+		</tr>
 	<% @movies.each do |movie| %>
 	  <article <%= 'class="complete"' if movie.complete %>>
-	    <p>
-	      	<%= movie.title %>
-			<%= movie.lead %>
-			<%= movie.director %>
-			<%= movie.genre %>
-	    </p>
+		
+			<tr>
+				<td><%= movie.title %> </td>
+				<td><%= movie.director %> </td>
+				<td><%= movie.lead %> </td>	
+				<td><%= movie.genre %> </td>	
+			</tr>	
 	  </article>
 	<% end %>
+	</table>

@@ -8,7 +8,6 @@ end
 
 get ('/collection') do
   @movies = Movie.all :order => :id.desc
-  @title = 'All Movies'
   erb :collection
 end
 
