@@ -7,9 +7,9 @@ get ('/add') do
 end
 
 get ('/collection') do
-  movies = Movies.all :order => :id.desc
+  @movies = Movie.all :order => :id.desc
   @title = 'All Movies'
-  erb :collection, :locals => { :movies => movies }
+  erb :collection
 end
 
 get ('/') do
@@ -18,7 +18,7 @@ end
 
 DataMapper::setup(:default, "sqlite3://#{Dir.pwd}/movies.db") #setting up new database name movies.db
 
-class Movies #DataMapper creates table called notes
+class Movie #DataMapper creates table called notes
   include DataMapper::Resource
   property :id, Serial
   property :title, Text, :required => true
@@ -31,7 +31,7 @@ end
 DataMapper.finalize.auto_upgrade! #Tells Datamapper to automaticly update the database with changes made
 
 post '/collection' do
-  m = Movies.new
+  m = Movie.new
   m.title = params[:title]
   m.genre = params[:genre]
   m.director = params[:director]
