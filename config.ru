@@ -1,2 +1,2 @@
-require 'sinatra'
+require 'movies'
 run Sinatra::Application
