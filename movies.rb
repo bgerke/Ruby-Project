@@ -15,7 +15,7 @@ get ('/') do
 	erb :main
 end
 
-DataMapper::setup(:default, "sqlite3://#{Dir.pwd}/movies.db") #setting up new database name movies.db
+DataMapper::setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/movies.db") #setting up new database name movies.db
 
 class Movie #DataMapper creates table called notes
   include DataMapper::Resource
