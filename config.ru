@@ -1,7 +1,7 @@
 require 'sinatra'
 require 'movies'
 require 'datamapper'
-
-require File.join(File.dirname(__FILE__), 'movies')
+require 'rubygems'
+DataMapper.setup(:default, ENV['DATABASE_URL'] || 'sqlite3://movies.db')
 
 run Sinatra::Application
