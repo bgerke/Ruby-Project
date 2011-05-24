@@ -26,6 +26,9 @@ GEM
       dm-core (~> 1.1.0)
     dm-migrations (1.1.0)
       dm-core (~> 1.1.0)
+    dm-postgres-adapter (1.1.0)
+      dm-do-adapter (~> 1.1.0)
+      do_postgres (~> 0.10.2)
     dm-serializer (1.1.0)
       dm-core (~> 1.1.0)
       fastercsv (~> 1.5.4)
@@ -46,6 +49,8 @@ GEM
       uuidtools (~> 2.1.2)
     dm-validations (1.1.0)
       dm-core (~> 1.1.0)
+    do_postgres (0.10.6)
+      data_objects (= 0.10.6)
     do_sqlite3 (0.10.6)
       data_objects (= 0.10.6)
     fastercsv (1.5.4)
@@ -63,5 +68,6 @@ PLATFORMS
 
 DEPENDENCIES
   datamapper (>= 1.1.0)
+  dm-postgres-adapter
   dm-sqlite-adapter
   sinatra (>= 1.2)
