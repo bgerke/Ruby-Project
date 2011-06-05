@@ -19,7 +19,8 @@
 				<td><%= movie.title %> </td>
 				<td><%= movie.director %> </td>
 				<td><%= movie.lead %> </td>	
-				<td><%= movie.genre %> </td>	
+				<td><%= movie.genre %> </td>
+				<td><a href="/<%= @movie.id %>/delete">Delete</a></td>	
 			</tr>	
 	  </article>
 	<% end %>

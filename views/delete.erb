@@ -1,0 +1,10 @@
+<% if @movie %>
+  <p>Delete the following movie: <em>"<%= @movie.content %>"</em>?</p>
+  <form action="/<%= @movie.id %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Yes, Delete It!">
+    <a href="/<%= @movie.id %>">Cancel</a>
+  </form>
+<% else %>
+  <p>Movie not found.</p>
+<% end %>

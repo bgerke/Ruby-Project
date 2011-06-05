@@ -16,6 +16,16 @@ get ('/') do
 	erb :main
 end
 
+get ('/:id') do
+  @movie = Movie.get params[:id]
+  erb :edit
+end
+
+get ('/:id/delete') do
+  @movie = Movie.get params[:id]
+  erb :delete
+end
+
 #DataMapper::setup(:default, "sqlite3://#{Dir.pwd}/movies.db") #setting up new database name movies.db
 DataMapper.setup(:default, ENV["DATABASE_URL"] || "sqlite3://#{Dir.pwd}/movies.db")
 
@@ -39,4 +49,10 @@ post '/collection' do
   m.lead = params[:lead]
   m.save
   redirect '/collection'
+end
+
+delete '/:id' do
+  m = Movie.get params[:id]
+  m.destroy
+  redirect '/'
 end
